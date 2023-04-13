@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+class person {
+public:
+    int  age;
+    string name, national;
+    bool sex;
+    person(int age, string names,string national, bool sex) {
+        this->national = national;
+        this->age = age;
+        this->name = name;
+        this->sex = sex;
+    }
+
+    void vozrast(int day)
+    {
+        this->age += age;
+    }
+    void changesex() {
+        this->sex = !sex;
+        if (sex == 1)
+            cout << "man";
+        if (sex == 0) 
+            cout << "woman";
+    }
+    void say(person* people) {
+        // cout << this->name << " hello" << people->name;
+        // cout << name << "\n";
+        // cout << "jfhdgkds";
+        cout << this->name << "\n";
+        cout << "herte";
+    }
+
+};
+
+int main()
+{
+    person* dima = new person( 17,"dima" ,"russian", 1);
+    person* gate = new person( 17,"ahsdgfjh" ,"russian", 1);
+    // cout << dima->national << "\n";
+    // cout << dima->name << "\n";
+    // cout << dima->age << "\n";
+    // dima->vozrast(17);
+    // cout << dima->age << "\n";
+    // dima->changesex();
+    // cout << dima->sex << "\n";
+    dima->say(gate);
+}
